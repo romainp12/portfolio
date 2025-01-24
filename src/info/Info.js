@@ -98,30 +98,6 @@ export const info = {
             live: "#", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
             source: "#", // this should be a link to the **repository** of the project, where the code is hosted.
             image: mock1
-        },
-        {
-            title: "Coming soon 🔜",
-            live: "#",
-            source: "#",
-            image: mock1
-        },
-        {
-            title: "Coming soon 🔜",
-            live: "#",
-            source: "#",
-            image: mock1
-        },
-        {
-            title: "Coming soon 🔜",
-            live: "#",
-            source: "#",
-            image: mock1
-        },
-        {
-            title: "Coming soon 🔜",
-            live: "#",
-            source: "#",
-            image: mock1
         }
     ]
 }
