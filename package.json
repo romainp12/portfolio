@@ -36,7 +36,6 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "build": "CI=false react-scripts build",
     "extends": "react-app"
   },
   "browserslist": {
