@@ -42,6 +42,11 @@ export const info = {
             link: "https://twitter.com/footpatrolfr",
             icon: "fa fa-twitter",
             label: 'twitter'
+        },
+        {
+            link: "https://drive.google.com/file/d/1uKneUis2ByMwSZGsBra_zKKTbR1JeeQP/view",
+            icon: "fa fa-clipboard",
+            label: 'clipboard'
         }
 
     ],
