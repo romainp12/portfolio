@@ -1,5 +1,5 @@
 import self from "../img/self.png"
-import mock1 from "../img/mockk.png"
+import mock1 from "../img/mocknew.png"
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
