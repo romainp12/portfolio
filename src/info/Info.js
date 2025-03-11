@@ -93,6 +93,12 @@ export const info = {
             live: "http://romainp12-zoo.fwh.is/login.php",
             source: "#",
             image: mock2
+        },
+        {
+            title: "News API",
+            live: "http://romainp12-zoo.fwh.is/login.php",
+            source: "#",
+            image: mock3
         }
     ]
 }
