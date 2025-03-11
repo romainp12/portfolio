@@ -1,5 +1,7 @@
 import self from "../img/self.png"
 import mock1 from "../img/mock1.png"
+import mock2 from "../img/mock2.png"
+
 
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
@@ -81,10 +83,16 @@ export const info = {
     ],
     portfolio: [
         {
-            title: "Projet Zoo",
+            title: "Gestion d'un zoo",
             live: "http://romainp12-zoo.fwh.is/login.php",
             source: "#",
             image: mock1
+        },
+        {
+            title: "Gestion d'activités",
+            live: "http://romainp12-zoo.fwh.is/login.php",
+            source: "#",
+            image: mock2
         }
     ]
 }
