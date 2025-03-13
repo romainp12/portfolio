@@ -27,7 +27,7 @@ export const info = {
         },
         {
             emoji: "📧",
-            text: "rpereira.pro@gmail.com"
+            text: (<a href="mailto:rpereira.pro@gmail.com">rpereira.pro@gmail.com</a>)
         }
     ],
     socials: [
