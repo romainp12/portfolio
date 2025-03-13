@@ -98,7 +98,7 @@ export const info = {
         {
             title: "News API",
             live: "",
-            source: "#",
+            source: "https://github.com/romainp12/news-api",
             image: mock3
         }
     ]
