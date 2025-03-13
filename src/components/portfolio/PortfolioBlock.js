@@ -43,9 +43,11 @@ import { Box, Typography } from '@mui/material';
          fontSize={'1.2rem'}
          py={'1rem'}
        >
-         <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
-           <IconLink link={source} title={'Source Code'} icon={'fa fa-code'} />
-         </Box>
+         {source && (
+          <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
+            <IconLink link={source} title={'Source Code'} icon={'fa fa-code'} />
+          </Box>
+        )}
          {live && (
            <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
              <IconLink link={live} title={'Live Demo'} icon={'fa fa-safari'} />
