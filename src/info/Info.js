@@ -86,18 +86,18 @@ export const info = {
         {
             title: "Gestion d'un zoo",
             live: "http://romainp12-zoo.fwh.is/login.php",
-            source: "#",
+            source: "",
             image: mock1
         },
         {
             title: "Gestion d'activités",
             live: "http://romainp12-zoo.fwh.is/login.php",
-            source: "#",
+            source: "",
             image: mock2
         },
         {
             title: "News API",
-            live: "http://romainp12-zoo.fwh.is/login.php",
+            live: "",
             source: "#",
             image: mock3
         }
