@@ -57,8 +57,8 @@ export const info = {
     skills:
         {
             languages: ['JavaScript', 'Python', 'Java', 'C#', 'PHP', 'HTML/CSS', 'Go'],
-            frameworks: ['React', 'Express', 'Flask', 'Django', 'Gin', 'Bootstrap', 'Tailwind'],
-            databases: ['MySQL', 'SQLite', 'MongoDB', 'MSSQL', 'Firebase'],
+            frameworks: ['React', 'Express', 'Flask', 'Django', 'Bootstrap', 'Tailwind'],
+            databases: ['MySQL', 'SQLite', 'MongoDB', 'Firebase'],
             cloudServices: ['AWS EC2', 'GCP', 'Heroku'],
             tools: ['Git', 'Postman', 'Insomnia', 'npm', 'pip', 'Swagger']
         }
