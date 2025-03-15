@@ -47,7 +47,7 @@ export const info = {
             label: 'twitter'
         },
         {
-            link: "https://drive.google.com/file/d/1uKneUis2ByMwSZGsBra_zKKTbR1JeeQP/view",
+            link: "https://drive.google.com/file/d/1JS3_LtOTLO6fKu5aNTWnk0KpBMhGAR_t/view",
             icon: "fa fa-clipboard",
             label: 'clipboard'
         }
