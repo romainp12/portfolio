@@ -56,7 +56,7 @@ export const info = {
     bio: "Hello! I'm Romain Pereira. I'm a Full Stack Student Developer. I enjoy building web applications and learning new technologies. I'm currently studying at Lycée Parc de Vilgénis. I love to travel and explore new places. I'm currently based in Paris, France.",
     skills:
         {
-            languages: ['JavaScript', 'Python', 'Java', 'C#', 'PHP', 'HTML/CSS', 'Go'],
+            languages: ['JavaScript', 'Python', 'Java', 'C#', 'PHP', 'Go', 'HTML', 'CSS'],
             frameworks: ['React', 'Express', 'Flask', 'Django', 'Bootstrap', 'Tailwind'],
             databases: ['MySQL', 'SQLite', 'MongoDB', 'Firebase'],
             cloudServices: ['AWS EC2', 'GCP', 'Heroku'],
