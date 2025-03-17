@@ -91,7 +91,7 @@ export const info = {
         },
         {
             title: "Gestion d'activités",
-            live: "http://romainp12-zoo.fwh.is/login.php",
+            live: "http://romainp12-vva.fwh.is/index.php",
             source: "",
             image: mock2
         },
