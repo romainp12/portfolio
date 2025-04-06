@@ -108,5 +108,31 @@ export const info = {
             source: "https://github.com/romainp12/atmos-executive",
             image: mock4
         }
+    ],
+    techwatch: [
+        {
+            title: "Gestion d'un zoo",
+            live: "http://romainp12-zoo.fwh.is/login.php",
+            source: "",
+            image: mock1
+        },
+        {
+            title: "Gestion d'activités",
+            live: "http://romainp12-vva.fwh.is/index.php",
+            source: "",
+            image: mock2
+        },
+        {
+            title: "News API",
+            live: "",
+            source: "https://github.com/romainp12/news-api",
+            image: mock3
+        },
+        {
+            title: "Atmos Executive",
+            live: "",
+            source: "https://github.com/romainp12/atmos-executive",
+            image: mock4
+        }
     ]
 }
