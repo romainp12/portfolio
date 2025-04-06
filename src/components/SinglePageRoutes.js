@@ -10,5 +10,6 @@ export default function SinglePageRoutes({refs}) {
         <Home innerRef={refs.refHome}/>
         <About innerRef={refs.refAbout}/>
         <Portfolio innerRef={refs.refPortfolio}/>
+        <Techwatch innerRef={refs.refTechwatch}/>
     </Box>)
 }
