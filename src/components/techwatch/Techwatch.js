@@ -9,7 +9,7 @@ import {info} from "../../info/Info";
        <Grid container display={'flex'} justifyContent={'center'}>
          {info.portfolio.map((project, index) => (
            <Grid item xs={12} md={6} key={index}>
-             <PortfolioBlock
+             <TechwatchBlock
                image={project.image}
                live={project.live}
                source={project.source}
