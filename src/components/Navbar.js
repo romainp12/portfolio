@@ -30,7 +30,7 @@ const links = [
         active: 'portfolio'
     },
     {
-        name: 'Techwatch',
+        name: 'tech watch',
         to: 'techwatch',
         active: 'techwatch'
     }
