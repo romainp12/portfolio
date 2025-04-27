@@ -26,7 +26,7 @@ export default function Techwatch() {
             fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
           }}
         >
-          Voitures Autonomes
+          Veille Technologique - Voitures Autonomes
         </Typography>
         
         <Typography 
