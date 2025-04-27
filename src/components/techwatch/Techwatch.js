@@ -13,20 +13,35 @@ export default function Techwatch() {
       {/* En-tête de la veille technologique */}
       <Box mb={6} textAlign="center" className={Style.header}>
         <Typography 
-          variant="h2" 
+          variant="h3" 
           component="h1" 
           sx={{ 
             background: info.gradient,
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             mb: 2,
-            fontWeight: 'bold' 
+            fontWeight: 'bold',
+            maxWidth: '800px',
+            mx: 'auto',
+            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
           }}
         >
-          {autonomousCarData.title}
+          Veille Technologique: Voitures Autonomes
         </Typography>
         
-        <Typography variant="h6" color="textSecondary" sx={{ mb: 4, maxWidth: '800px', mx: 'auto' }}>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            mb: 4, 
+            maxWidth: '800px', 
+            mx: 'auto',
+            color: 'white',
+            backgroundColor: 'rgba(0,0,0,0.7)',
+            p: 2,
+            borderRadius: '8px',
+            fontSize: { xs: '0.9rem', sm: '1rem' }
+          }}
+        >
           {autonomousCarData.introduction}
         </Typography>
         
@@ -35,9 +50,10 @@ export default function Techwatch() {
           sx={{ 
             width: '100%',
             height: '300px',
-            background: `url(https://placehold.co/1200x300?text=Voitures+Autonomes) center/cover no-repeat`,
+            background: `url(https://res.cloudinary.com/dzszhtctg/image/upload/v1714347687/autonomous_car_hero_fqvyhk.jpg) center/cover no-repeat`,
             borderRadius: '16px',
-            mb: 4
+            mb: 4,
+            boxShadow: '0 8px 16px rgba(0,0,0,0.2)'
           }}
         />
       </Box>
@@ -62,7 +78,27 @@ export default function Techwatch() {
               <Grid container>
                 <Grid item xs={12} md={6} order={{ xs: 2, md: index % 2 === 0 ? 1 : 2 }}>
                   <CardContent sx={{ p: 4, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
+                    <Typography 
+                      variant="h4" 
+                      component="h2" 
+                      gutterBottom 
+                      sx={{ 
+                        fontWeight: 'bold',
+                        fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' },
+                        position: 'relative',
+                        display: 'inline-block',
+                        '&::after': {
+                          content: '""',
+                          position: 'absolute',
+                          bottom: '-6px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: info.gradient,
+                          borderRadius: '2px'
+                        }
+                      }}
+                    >
                       {section.title}
                     </Typography>
                     
@@ -96,7 +132,12 @@ export default function Techwatch() {
                     sx={{ 
                       height: '100%',
                       minHeight: '300px',
-                      objectFit: 'cover'
+                      objectFit: 'cover',
+                      filter: 'brightness(1.05)',
+                      transition: 'filter 0.3s ease',
+                      '&:hover': {
+                        filter: 'brightness(1.1) saturate(1.1)'
+                      }
                     }}
                   />
                 </Grid>
@@ -107,12 +148,12 @@ export default function Techwatch() {
       </Grid>
 
       {/* Conclusion */}
-      <Box my={6} p={4} sx={{ backgroundColor: 'rgba(0,255,164, 0.05)', borderRadius: '16px' }} className={Style.conclusion}>
-        <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
+      <Box my={6} p={4} sx={{ backgroundColor: 'rgba(0,255,164, 0.12)', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} className={Style.conclusion}>
+        <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#333' }}>
           Conclusion
         </Typography>
         
-        <Typography variant="body1">
+        <Typography variant="body1" sx={{ color: '#333', fontSize: '1.05rem', lineHeight: 1.6 }}>
           {autonomousCarData.conclusion}
         </Typography>
       </Box>
