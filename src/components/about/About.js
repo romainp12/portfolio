@@ -104,17 +104,17 @@ function stagesText() {
           {firstName}
           {info.lastName.toLowerCase()} $
         </span>{' '}
-        cd stages
+        cd internships
       </p>
       <p>
         <span style={{ color: info.baseColor }}>
-          stages <span className={Style.green}>(main)</span> $
+          internships <span className={Style.green}>(main)</span> $
         </span>{' '}
         ls
       </p>
       {info.stages.map((stage, index) => (
         <div key={index} className={Style.stageItem}>
-          <p style={{ color: info.baseColor }}>{stage.company} - {stage.date}</p>
+          <p style={{ color: info.baseColor }}>{stage.company} | {stage.date}</p>
           <ul>
             {stage.missions.map((mission, mIndex) => (
               <li key={mIndex}>{mission}</li>
