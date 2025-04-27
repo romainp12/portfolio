@@ -24,9 +24,11 @@
 .sectionCard {
   border: 1px solid #eaeaea;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   
   &:hover {
     border-color: rgb(0,255,164);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
 }
 
@@ -103,5 +105,25 @@
   
   .header {
     margin-bottom: 3rem;
+  }
+  
+  .terminalSection {
+    padding: 1rem !important;
+  }
+  
+  .conclusion {
+    padding: 1rem !important;
+  }
+}
+
+/* Pour mode sombre */
+@media (prefers-color-scheme: dark) {
+  .conclusion {
+    color: #f5f5f5 !important;
+    background-color: rgba(0, 255, 164, 0.15) !important;
+  }
+  
+  .conclusion h2, .conclusion p {
+    color: #f5f5f5 !important;
   }
 }
