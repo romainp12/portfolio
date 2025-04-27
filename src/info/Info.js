@@ -142,7 +142,7 @@ autonomousCars: {
     {
       title: "Technologies Clés",
       content: "Les voitures autonomes s'appuient sur un ensemble de capteurs sophistiqués (LiDAR, caméras, radar), des systèmes de cartographie HD et des algorithmes d'intelligence artificielle pour percevoir leur environnement et prendre des décisions en temps réel.",
-      image: "https://static.generation-robots.com/img/capteurs-vehicules-autonomes.jpg",
+      image: "https://images.caradisiac.com/images/3/9/4/9/183949/S0-ou-en-est-waymo-la-puissante-machine-de-guerre-de-google-pour-la-voiture-autonome-634202.jpg",
       imageAlt: "Capteurs de voitures autonomes",
       tags: ["LiDAR", "Intelligence Artificielle", "Computer Vision"]
     },
