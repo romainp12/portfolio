@@ -127,6 +127,7 @@ stages: [
             image: mock4
         }
     ],
+    
 autonomousCars: {
   title: "Veille Technologique : Voitures Autonomes",
   introduction: "Les voitures autonomes représentent l'un des développements technologiques les plus révolutionnaires de notre époque. Cette veille explore les avancées récentes, les défis et les perspectives d'avenir de cette technologie transformative.",
@@ -134,35 +135,35 @@ autonomousCars: {
     {
       title: "Niveaux d'Autonomie",
       content: "La classification standard des véhicules autonomes comporte 6 niveaux (de 0 à 5). Actuellement, la plupart des véhicules commercialisés se situent entre les niveaux 2 et 3, avec des fonctionnalités comme l'assistance au maintien de voie et le régulateur de vitesse adaptatif.",
-      image: "https://placehold.co/600x400?text=Niveaux+Autonomie",
+      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_levels_d0t4yd.jpg",
       imageAlt: "Niveaux d'autonomie des véhicules",
       tags: ["Classification", "SAE", "Niveaux 0-5"]
     },
     {
       title: "Technologies Clés",
       content: "Les voitures autonomes s'appuient sur un ensemble de capteurs sophistiqués (LiDAR, caméras, radar), des systèmes de cartographie HD et des algorithmes d'intelligence artificielle pour percevoir leur environnement et prendre des décisions en temps réel.",
-      image: "https://placehold.co/600x400?text=Technologies+Cles",
+      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_tech_yrcgui.jpg",
       imageAlt: "Capteurs de voitures autonomes",
       tags: ["LiDAR", "Intelligence Artificielle", "Computer Vision"]
     },
     {
       title: "Acteurs Majeurs",
       content: "Waymo (Google), Tesla, GM Cruise et Baidu sont parmi les leaders du secteur, chacun poursuivant des approches technologiques distinctes. Tesla mise sur la vision par caméra, tandis que Waymo privilégie le LiDAR pour une perception plus précise.",
-      image: "https://placehold.co/600x400?text=Acteurs+Majeurs",
+      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347687/autonomous_companies_ivn5vt.jpg",
       imageAlt: "Entreprises de voitures autonomes",
       tags: ["Waymo", "Tesla", "Baidu", "GM Cruise"]
     },
     {
       title: "Défis Actuels",
       content: "Malgré les progrès considérables, des obstacles significatifs demeurent : fiabilité dans des conditions météorologiques difficiles, compréhension des situations complexes en zone urbaine, cadres réglementaires et questions de responsabilité en cas d'accident.",
-      image: "https://placehold.co/600x400?text=Defis+Actuels",
+      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347687/autonomous_challenges_eswn3j.jpg",
       imageAlt: "Défis des voitures autonomes",
       tags: ["Régulation", "Sécurité", "Éthique"]
     },
     {
       title: "Perspectives d'Avenir",
       content: "Les analystes prévoient que les taxis autonomes seront la première application commerciale à grande échelle, suivis par le transport de marchandises. L'adoption généralisée des véhicules particuliers entièrement autonomes pourrait prendre encore 5 à 10 ans.",
-      image: "https://placehold.co/600x400?text=Perspectives+Avenir",
+      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_future_bmbsjx.jpg",
       imageAlt: "Futur des voitures autonomes",
       tags: ["Prévisions", "Robotaxis", "Transport"]
     }
