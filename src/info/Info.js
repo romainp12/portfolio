@@ -20,11 +20,11 @@ export const info = {
     miniBio: [
         {
             emoji: '🇫🇷',
-            text: 'Based in Paris, France'
+            text: 'Basé à Paris, France'
         },
         {
             emoji: "👨‍💻", // 👨‍💻
-            text: "Student at Lycée Parc de Vilgénis"
+            text: "Étudiant au Lycée Parc de Vilgénis"
         },
         {
             emoji: "📧",
@@ -54,27 +54,27 @@ export const info = {
         }
 
     ],
-    bio: "Hello! I'm Romain Pereira. I'm a Full Stack Student Developer. I enjoy building web applications and learning new technologies. I'm currently studying at Lycée Parc de Vilgénis. I love to travel and explore new places. I'm currently based in Paris, France.",
+    bio: "Bonjour ! Je suis Romain Pereira. Je suis un étudiant Développeur Full Stack en BTS SIO Option SLAM. J'aime développer des applications web et apprendre de nouvelles technologies. J'étudie actuellement au Lycée Parc de Vilgénis. J'adore voyager et explorer de nouveaux endroits. Je suis actuellement basé à Paris, France.",
     skills:
         {
             languages: ['JavaScript', 'Python', 'Java', 'C#', 'PHP', 'Go', 'HTML', 'CSS'],
             frameworks: ['React', 'Express', 'Flask', 'Django', 'Bootstrap', 'Tailwind'],
             databases: ['MySQL', 'SQLite', 'MongoDB', 'Firebase'],
             cloudServices: ['AWS EC2', 'GCP', 'Heroku'],
-            tools: ['Git', 'Postman', 'Insomnia', 'npm', 'pip', 'Swagger']
+            tools: ['Git', 'Postman', 'Insomnia', 'npm', 'pip']
         }
     ,
     hobbies: [
         {
-            label: 'Traveling',
+            label: 'Voyages',
             emoji: '✈️'
         },
         {
-            label: 'Video Games',
+            label: 'Jeux vidéo',
             emoji: '🎮'
         },
         {
-            label: 'Soccer',
+            label: 'Football',
             emoji: '⚽️'
         },
         {
@@ -85,21 +85,19 @@ export const info = {
     ],
 stages: [
     {
-        company: "Company Name 1",
-        date: "Jun 2023 - Aug 2023",
+        company: "DS Pièces Auto",
+        date: "Novembre - Décembre 2024",
         missions: [
-            "Developed responsive web applications using React",
-            "Implemented RESTful APIs with Node.js and Express",
-            "Collaborated with design team to improve user experience"
+            "Automatisation de tâches via scripts Python",
+            "Export des données de commandes aux formats CSV/JSON"
         ]
     },
     {
-        company: "Company Name 2",
-        date: "Jan 2023 - Mar 2023",
+        company: "Montagrues",
+        date: "Mai - Juillet 2024",
         missions: [
-            "Created database schemas and implemented data models",
-            "Built authentication system using JWT",
-            "Deployed applications to cloud platforms"
+            "Mise à jour, maintenance et ajout de fonctionnalités du site sous WordPress",
+            "Développement de scripts VBA pour les estimations du chiffre d’affaires"
         ]
     }
 ],
