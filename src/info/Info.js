@@ -1,187 +1,278 @@
-import self from "../img/self.png"
-import mock1 from "../img/mock1.png"
-import mock2 from "../img/mock2.png"
-import mock3 from "../img/mock3.png"
-import mock4 from "../img/mock4.png"
+// src/components/techwatch/Techwatch.js
+import React, { useContext } from 'react';
+import { Box, Grid, Typography, Container, Card, CardContent, CardMedia, Divider, Chip, useTheme } from "@mui/material";
+import { info } from "../../info/Info";
+import Style from './Techwatch.module.scss';
 
-
-export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
-
-export let singlePage = false;
-
-export const info = {
-    firstName: "Romain",
-    lastName: "Pereira",
-    initials: "RP",
-    position: "Full Stack Student Developer",
-    selfPortrait: self,
-    gradient: `-webkit-linear-gradient(135deg, ${colors})`,
-    baseColor: colors[0],
-    miniBio: [
-        {
-            emoji: '🇫🇷',
-            text: 'Basé à Paris, France'
-        },
-        {
-            emoji: "👨‍💻", // 👨‍💻
-            text: "Étudiant au Lycée Parc de Vilgénis"
-        },
-        {
-            emoji: "📧",
-            text: (<a href="mailto:rpereira.pro@gmail.com">rpereira.pro@gmail.com</a>)
-        }
-    ],
-    socials: [
-        {
-            link: "https://linkedin.com/in/romain-pereira-233418206/",
-            icon: 'fa fa-linkedin',
-            label: 'linkedin'
-        },
-        {
-            link: "https://github.com/romainp12",
-            icon: 'fa fa-github',
-            label: 'github'
-        },
-        {
-            link: "https://twitter.com/footpatrolfr",
-            icon: "fa fa-twitter",
-            label: 'twitter'
-        },
-        {
-            link: "https://drive.google.com/file/d/1fCwWG2x74ECGr2L28pLXNke7cr_NAWkc/view",
-            icon: "fa fa-clipboard",
-            label: 'clipboard'
-        }
-
-    ],
-    bio: "Bonjour ! Je suis Romain Pereira. Je suis un étudiant Développeur Full Stack en BTS SIO Option SLAM. J'aime développer des applications web et apprendre de nouvelles technologies. J'étudie actuellement au Lycée Parc de Vilgénis. J'adore voyager et explorer de nouveaux endroits. Je suis actuellement basé à Paris, France.",
-    skills:
-        {
-            languages: ['JavaScript', 'Python', 'Java', 'C#', 'PHP', 'Go', 'HTML', 'CSS'],
-            frameworks: ['React', 'Express', 'Flask', 'Django', 'Bootstrap', 'Tailwind'],
-            databases: ['MySQL', 'SQLite', 'MongoDB', 'Firebase'],
-            cloudServices: ['AWS EC2', 'GCP', 'Heroku'],
-            tools: ['Git', 'Postman', 'Insomnia', 'npm', 'pip']
-        }
-    ,
-    hobbies: [
-        {
-            label: 'Voyages',
-            emoji: '✈️'
-        },
-        {
-            label: 'Jeux vidéo',
-            emoji: '🎮'
-        },
-        {
-            label: 'Football',
-            emoji: '⚽️'
-        },
-        {
-            label: 'Padel',
-            emoji: '🎾'
-        }
+export default function Techwatch() {
+  // Utilisation des données directement depuis info.js
+  const autonomousCarData = info.autonomousCars;
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === 'dark';
+  
+  return (
+    <Container maxWidth="lg" sx={{ py: 6 }} className={Style.techwatchContainer}>
+      {/* En-tête de la veille technologique */}
+      <Box mb={6} textAlign="center" className={Style.header}>
+        <Typography 
+          variant="h3" 
+          component="h1" 
+          sx={{ 
+            background: info.gradient,
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            mb: 2,
+            fontWeight: 'bold',
+            maxWidth: '800px',
+            mx: 'auto',
+            fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' }
+          }}
+        >
+          Veille Technologique - Voitures Autonomes
+        </Typography>
         
-    ],
-stages: [
-    {
-        company: "DS Pièces Auto",
-        date: "Novembre - Décembre 2024",
-        missions: [
-            "Automatisation de tâches via scripts Python",
-            "Export des données de commandes aux formats CSV/JSON"
-        ]
-    },
-    {
-        company: "Montagrues",
-        date: "Mai - Juillet 2024",
-        missions: [
-            "Mise à jour, maintenance et ajout de fonctionnalités du site sous WordPress",
-            "Développement de scripts VBA pour les estimations du chiffre d’affaires"
-        ]
-    }
-],
-    portfolio: [
-        {
-            title: "Gestion d'un zoo",
-            live: "http://romainp12-zoo.fwh.is/login.php",
-            source: "",
-            image: mock1
-        },
-        {
-            title: "Gestion d'activités",
-            live: "http://romainp12-vva.fwh.is/index.php",
-            source: "",
-            image: mock2
-        },
-        {
-            title: "News API",
-            live: "",
-            source: "https://github.com/romainp12/news-api",
-            image: mock3
-        },
-        {
-            title: "Atmos Executive",
-            live: "",
-            source: "https://github.com/romainp12/atmos-executive",
-            image: mock4
-        }
-    ],
-    
-autonomousCars: {
-  title: "Veille Technologique : Voitures Autonomes",
-  introduction: "Les voitures autonomes représentent l'un des développements technologiques les plus révolutionnaires de notre époque. Cette veille explore les avancées récentes, les défis et les perspectives d'avenir de cette technologie transformative.",
-  sections: [
-    {
-      title: "Niveaux d'Autonomie",
-      content: "La classification standard des véhicules autonomes comporte 6 niveaux (de 0 à 5). Actuellement, la plupart des véhicules commercialisés se situent entre les niveaux 2 et 3, avec des fonctionnalités comme l'assistance au maintien de voie et le régulateur de vitesse adaptatif.",
-      image: "https://images.frandroid.com/wp-content/uploads/2022/08/conduite-autonome-light.png",
-      imageAlt: "Niveaux d'autonomie des véhicules",
-      tags: ["Classification", "SAE", "Niveaux 0-5"]
-    },
-    {
-      title: "Technologies Clés",
-      content: "Les voitures autonomes s'appuient sur un ensemble de capteurs sophistiqués (LiDAR, caméras, radar), des systèmes de cartographie HD et des algorithmes d'intelligence artificielle pour percevoir leur environnement et prendre des décisions en temps réel.",
-      image: "https://images.caradisiac.com/images/3/9/4/9/183949/S0-ou-en-est-waymo-la-puissante-machine-de-guerre-de-google-pour-la-voiture-autonome-634202.jpg",
-      imageAlt: "Capteurs de voitures autonomes",
-      tags: ["LiDAR", "Intelligence Artificielle", "Computer Vision"]
-    },
-    {
-      title: "Acteurs Majeurs",
-      content: "Waymo (Google), Tesla, GM Cruise et Baidu sont parmi les leaders du secteur, chacun poursuivant des approches technologiques distinctes. Tesla mise sur la vision par caméra, tandis que Waymo privilégie le LiDAR pour une perception plus précise.",
-      image: "https://www.shop4tesla.com/cdn/shop/articles/tesla-vs-waymo-der-wettlauf-um-robotaxis-in-den-usa-921196.jpg?v=1728515227",
-      imageAlt: "Entreprises de voitures autonomes",
-      tags: ["Waymo", "Tesla", "Baidu", "GM Cruise"]
-    },
-    {
-      title: "Défis Actuels",
-      content: "Malgré les progrès considérables, des obstacles significatifs demeurent : fiabilité dans des conditions météorologiques difficiles, compréhension des situations complexes en zone urbaine, cadres réglementaires et questions de responsabilité en cas d'accident.",
-      image: "https://fastercapital.com/fr/i-fr/Vehicules-autonomes---la-revolution-sur-roues-d-AAI--Defis-et-preoccupations-concernant-les-vehicules-autonomes.webp",
-      imageAlt: "Défis des voitures autonomes",
-      tags: ["Régulation", "Sécurité", "Éthique"]
-    },
-    {
-      title: "Perspectives d'Avenir",
-      content: "Les analystes prévoient que les taxis autonomes seront la première application commerciale à grande échelle, suivis par le transport de marchandises. L'adoption généralisée des véhicules particuliers entièrement autonomes pourrait prendre encore 5 à 10 ans.",
-      image: "https://images.manouvellevoiture.com/data/image/v/o/voiture-autonome3.jpg?tr=pr-true",
-      imageAlt: "Futur des voitures autonomes",
-      tags: ["Prévisions", "Robotaxis", "Transport"]
-    }
-  ],
-  conclusion: "La technologie des véhicules autonomes continue d'évoluer rapidement, promettant de transformer fondamentalement nos modes de transport, nos villes et notre société. Cette révolution apportera des bénéfices significatifs en termes de sécurité, d'efficacité et d'accessibilité, tout en soulevant des questions importantes sur l'emploi, la vie privée et l'éthique.",
-  resources: [
-    {
-      name: "SAE International",
-      link: "https://www.sae.org/standards/content/j3016_202104/"
-    },
-    {
-      name: "Waymo Technology",
-      link: "https://waymo.com/tech/"
-    },
-    {
-      name: "Tesla AI Day Presentation",
-      link: "https://www.tesla.com/AI"
-    }
-  ]
-},
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            mb: 4, 
+            maxWidth: '800px', 
+            mx: 'auto',
+            color: 'white',
+            backgroundColor: isDarkMode ? 'rgba(20,20,20,0.8)' : 'rgba(0,0,0,0.7)',
+            p: 2,
+            borderRadius: '8px',
+            fontSize: { xs: '0.9rem', sm: '1rem' }
+          }}
+        >
+          {autonomousCarData.introduction}
+        </Typography>
+        
+        <Box 
+          component="div"
+          sx={{ 
+            width: '100%',
+            height: '300px',
+            background: `url(https://dda.ndus.edu/ddreview/wp-content/uploads/sites/18/2021/10/selfDriving.png) center/cover no-repeat`,
+            borderRadius: '16px',
+            mb: 4,
+            boxShadow: '0 8px 16px rgba(0,0,0,0.2)'
+          }}
+        />
+      </Box>
+
+      {/* Sections de la veille */}
+      <Grid container spacing={4}>
+        {autonomousCarData.sections.map((section, index) => (
+          <Grid item xs={12} key={index}>
+            <Card 
+              elevation={0} 
+              sx={{ 
+                borderRadius: '16px', 
+                overflow: 'hidden',
+                transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'translateY(-5px)',
+                  boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
+                },
+                backgroundColor: isDarkMode ? '#2a2a2a' : '#ffffff',
+                border: `1px solid ${isDarkMode ? '#444' : '#eaeaea'}`
+              }}
+              className={Style.sectionCard}
+            >
+              <Grid container>
+                <Grid item xs={12} md={6} order={{ xs: 2, md: index % 2 === 0 ? 1 : 2 }}>
+                  <CardContent sx={{ p: 4, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <Typography 
+                      variant="h4" 
+                      component="h2" 
+                      gutterBottom 
+                      sx={{ 
+                        fontWeight: 'bold',
+                        fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' },
+                        position: 'relative',
+                        display: 'inline-block',
+                        color: isDarkMode ? '#f5f5f5' : '#333',
+                        '&::after': {
+                          content: '""',
+                          position: 'absolute',
+                          bottom: '-6px',
+                          left: '0',
+                          width: '40px',
+                          height: '3px',
+                          background: info.gradient,
+                          borderRadius: '2px'
+                        }
+                      }}
+                    >
+                      {section.title}
+                    </Typography>
+                    
+                    <Typography 
+                      variant="body1" 
+                      sx={{ 
+                        mb: 3,
+                        color: isDarkMode ? '#e0e0e0' : 'text.primary'
+                      }}
+                    >
+                      {section.content}
+                    </Typography>
+                    
+                    <Box sx={{ mt: 'auto' }}>
+                      {section.tags.map((tag, tagIndex) => (
+                        <Chip 
+                          key={tagIndex}
+                          label={tag}
+                          size="small"
+                          sx={{ 
+                            mr: 1, 
+                            mb: 1,
+                            background: info.gradient,
+                            color: 'white'
+                          }}
+                        />
+                      ))}
+                    </Box>
+                  </CardContent>
+                </Grid>
+                
+                <Grid item xs={12} md={6} order={{ xs: 1, md: index % 2 === 0 ? 2 : 1 }}>
+                  <CardMedia
+                    component="img"
+                    image={section.image}
+                    alt={section.imageAlt}
+                    sx={{ 
+                      height: '100%',
+                      minHeight: '300px',
+                      objectFit: 'cover',
+                      filter: isDarkMode ? 'brightness(0.95)' : 'brightness(1.05)',
+                      transition: 'filter 0.3s ease',
+                      '&:hover': {
+                        filter: isDarkMode ? 'brightness(1.05)' : 'brightness(1.1) saturate(1.1)'
+                      }
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Conclusion */}
+      <Box 
+        my={6} 
+        p={4} 
+        sx={{ 
+          backgroundColor: isDarkMode ? 'rgba(0,255,164, 0.15)' : 'rgba(0,255,164, 0.1)', 
+          borderRadius: '16px', 
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+          borderLeft: '4px solid rgb(0,255,164)'
+        }} 
+        className={Style.conclusion}
+      >
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          gutterBottom 
+          sx={{ 
+            fontWeight: 'bold', 
+            color: isDarkMode ? '#f5f5f5' : '#333' 
+          }}
+        >
+          Conclusion
+        </Typography>
+        
+        <Typography 
+          variant="body1" 
+          sx={{ 
+            color: isDarkMode ? '#f5f5f5' : '#333', 
+            fontSize: '1.05rem', 
+            lineHeight: 1.6 
+          }}
+        >
+          {autonomousCarData.conclusion}
+        </Typography>
+      </Box>
+
+      {/* Ressources */}
+      <Box mb={6}>
+        <Typography 
+          variant="h5" 
+          component="h2" 
+          gutterBottom 
+          sx={{ 
+            fontWeight: 'bold',
+            color: isDarkMode ? '#f5f5f5' : '#333'
+          }}
+        >
+          Ressources
+        </Typography>
+        
+        <Divider sx={{ mb: 2, backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' }} />
+        
+        <ul className={`${Style.resourcesList} ${isDarkMode ? Style.darkResources : ''}`}>
+          {autonomousCarData.resources.map((resource, index) => (
+            <li key={index}>
+              <a 
+                href={resource.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={Style.resourceLink}
+                style={{ color: isDarkMode ? 'rgb(0,255,164)' : 'rgb(166,104,255)' }}
+              >
+                {resource.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Box>
+
+      {/* Mode terminal pour la cohérence avec le reste du site */}
+      <Box 
+        mb={6} 
+        p={3} 
+        sx={{ 
+          backgroundColor: isDarkMode ? '#1a1a1a' : '#2E3440', 
+          borderRadius: '8px', 
+          color: 'white' 
+        }} 
+        className={Style.terminalSection}
+      >
+        <Box mb={2} sx={{ display: 'flex', gap: '8px' }}>
+          <span className={Style.terminalDot} style={{ backgroundColor: '#FF5F56' }}></span>
+          <span className={Style.terminalDot} style={{ backgroundColor: '#FFBD2E' }}></span>
+          <span className={Style.terminalDot} style={{ backgroundColor: '#27C93F' }}></span>
+        </Box>
+        
+        <Typography sx={{ fontFamily: 'monospace', mb: 2 }}>
+          <span style={{ color: info.baseColor }}>
+            {info.firstName.toLowerCase()}
+            {info.lastName.toLowerCase()} $
+          </span>{' '}
+          cd tech-watch/voitures-autonomes
+        </Typography>
+        
+        <Typography sx={{ fontFamily: 'monospace' }}>
+          <span style={{ color: info.baseColor }}>
+            voitures-autonomes <span style={{ color: '#8fbcbb' }}>(main)</span> $
+          </span>{' '}
+          cat README.md
+        </Typography>
+        
+        <Box mt={2} sx={{ fontFamily: 'monospace' }}>
+          <Typography variant="body2" sx={{ color: '#D8DEE9', mb: 1 }}>
+            ## Cette veille technologique est mise à jour régulièrement
+          </Typography>
+          
+          <Typography variant="body2" sx={{ color: '#D8DEE9', mb: 1 }}>
+            ## Dernière mise à jour: Avril 2025
+          </Typography>
+          
+          <Typography variant="body2" sx={{ color: '#D8DEE9' }}>
+            ## Pour en savoir plus, consultez les ressources listées ci-dessus.
+          </Typography>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
