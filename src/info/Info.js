@@ -127,30 +127,60 @@ stages: [
             image: mock4
         }
     ],
-    techwatch: [
-        {
-            title: "Gestion d'un zoo",
-            live: "http://romainp12-zoo.fwh.is/login.php",
-            source: "",
-            image: mock1
-        },
-        {
-            title: "Gestion d'activités",
-            live: "http://romainp12-vva.fwh.is/index.php",
-            source: "",
-            image: mock2
-        },
-        {
-            title: "News API",
-            live: "",
-            source: "https://github.com/romainp12/news-api",
-            image: mock3
-        },
-        {
-            title: "Atmos Executive",
-            live: "",
-            source: "https://github.com/romainp12/atmos-executive",
-            image: mock4
-        }
-    ]
+autonomousCars: {
+  title: "Veille Technologique : Voitures Autonomes",
+  introduction: "Les voitures autonomes représentent l'un des développements technologiques les plus révolutionnaires de notre époque. Cette veille explore les avancées récentes, les défis et les perspectives d'avenir de cette technologie transformative.",
+  sections: [
+    {
+      title: "Niveaux d'Autonomie",
+      content: "La classification standard des véhicules autonomes comporte 6 niveaux (de 0 à 5). Actuellement, la plupart des véhicules commercialisés se situent entre les niveaux 2 et 3, avec des fonctionnalités comme l'assistance au maintien de voie et le régulateur de vitesse adaptatif.",
+      image: "https://placehold.co/600x400?text=Niveaux+Autonomie",
+      imageAlt: "Niveaux d'autonomie des véhicules",
+      tags: ["Classification", "SAE", "Niveaux 0-5"]
+    },
+    {
+      title: "Technologies Clés",
+      content: "Les voitures autonomes s'appuient sur un ensemble de capteurs sophistiqués (LiDAR, caméras, radar), des systèmes de cartographie HD et des algorithmes d'intelligence artificielle pour percevoir leur environnement et prendre des décisions en temps réel.",
+      image: "https://placehold.co/600x400?text=Technologies+Cles",
+      imageAlt: "Capteurs de voitures autonomes",
+      tags: ["LiDAR", "Intelligence Artificielle", "Computer Vision"]
+    },
+    {
+      title: "Acteurs Majeurs",
+      content: "Waymo (Google), Tesla, GM Cruise et Baidu sont parmi les leaders du secteur, chacun poursuivant des approches technologiques distinctes. Tesla mise sur la vision par caméra, tandis que Waymo privilégie le LiDAR pour une perception plus précise.",
+      image: "https://placehold.co/600x400?text=Acteurs+Majeurs",
+      imageAlt: "Entreprises de voitures autonomes",
+      tags: ["Waymo", "Tesla", "Baidu", "GM Cruise"]
+    },
+    {
+      title: "Défis Actuels",
+      content: "Malgré les progrès considérables, des obstacles significatifs demeurent : fiabilité dans des conditions météorologiques difficiles, compréhension des situations complexes en zone urbaine, cadres réglementaires et questions de responsabilité en cas d'accident.",
+      image: "https://placehold.co/600x400?text=Defis+Actuels",
+      imageAlt: "Défis des voitures autonomes",
+      tags: ["Régulation", "Sécurité", "Éthique"]
+    },
+    {
+      title: "Perspectives d'Avenir",
+      content: "Les analystes prévoient que les taxis autonomes seront la première application commerciale à grande échelle, suivis par le transport de marchandises. L'adoption généralisée des véhicules particuliers entièrement autonomes pourrait prendre encore 5 à 10 ans.",
+      image: "https://placehold.co/600x400?text=Perspectives+Avenir",
+      imageAlt: "Futur des voitures autonomes",
+      tags: ["Prévisions", "Robotaxis", "Transport"]
+    }
+  ],
+  conclusion: "La technologie des véhicules autonomes continue d'évoluer rapidement, promettant de transformer fondamentalement nos modes de transport, nos villes et notre société. Cette révolution apportera des bénéfices significatifs en termes de sécurité, d'efficacité et d'accessibilité, tout en soulevant des questions importantes sur l'emploi, la vie privée et l'éthique.",
+  resources: [
+    {
+      name: "SAE International",
+      link: "https://www.sae.org/standards/content/j3016_202104/"
+    },
+    {
+      name: "Waymo Technology",
+      link: "https://waymo.com/tech/"
+    },
+    {
+      name: "Tesla AI Day Presentation",
+      link: "https://www.tesla.com/AI"
+    }
+  ]
+},
 }
