@@ -96,11 +96,42 @@ export default function About() {
     );
   }
 
+function stagesText() {
+  return (
+    <>
+      <p>
+        <span style={{ color: info.baseColor }}>
+          {firstName}
+          {info.lastName.toLowerCase()} $
+        </span>{' '}
+        cd stages
+      </p>
+      <p>
+        <span style={{ color: info.baseColor }}>
+          stages <span className={Style.green}>(main)</span> $
+        </span>{' '}
+        ls
+      </p>
+      {info.stages.map((stage, index) => (
+        <div key={index} className={Style.stageItem}>
+          <p style={{ color: info.baseColor }}>{stage.company} - {stage.date}</p>
+          <ul>
+            {stage.missions.map((mission, mIndex) => (
+              <li key={mIndex}>{mission}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </>
+  );
+}
+
   return (
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
       <Terminal text={aboutMeText()} />
       <Terminal text={skillsText()} />
       <Terminal text={miscText()} />
+      <Terminal text={stagesText()} />
     </Box>
   );
 }
