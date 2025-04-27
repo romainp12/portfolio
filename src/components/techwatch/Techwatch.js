@@ -50,7 +50,7 @@ export default function Techwatch() {
           sx={{ 
             width: '100%',
             height: '300px',
-            background: `url(https://cdn.discordapp.com/attachments/1341785254469308445/1366120744664301678/1.png?ex=680fca96&is=680e7916&hm=6d7952ea5eaa5cc3004e7cb83dbd201f6203d025f1432edfda6373711d20d8ab&) center/cover no-repeat`,
+            background: `url(https://dda.ndus.edu/ddreview/wp-content/uploads/sites/18/2021/10/selfDriving.png) center/cover no-repeat`,
             borderRadius: '16px',
             mb: 4,
             boxShadow: '0 8px 16px rgba(0,0,0,0.2)'
