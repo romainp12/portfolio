@@ -135,21 +135,21 @@ autonomousCars: {
     {
       title: "Niveaux d'Autonomie",
       content: "La classification standard des véhicules autonomes comporte 6 niveaux (de 0 à 5). Actuellement, la plupart des véhicules commercialisés se situent entre les niveaux 2 et 3, avec des fonctionnalités comme l'assistance au maintien de voie et le régulateur de vitesse adaptatif.",
-      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_levels_d0t4yd.jpg",
+      image: "https://images.frandroid.com/wp-content/uploads/2022/08/conduite-autonome-light.png",
       imageAlt: "Niveaux d'autonomie des véhicules",
       tags: ["Classification", "SAE", "Niveaux 0-5"]
     },
     {
       title: "Technologies Clés",
       content: "Les voitures autonomes s'appuient sur un ensemble de capteurs sophistiqués (LiDAR, caméras, radar), des systèmes de cartographie HD et des algorithmes d'intelligence artificielle pour percevoir leur environnement et prendre des décisions en temps réel.",
-      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_tech_yrcgui.jpg",
+      image: "https://static.generation-robots.com/img/capteurs-vehicules-autonomes.jpg",
       imageAlt: "Capteurs de voitures autonomes",
       tags: ["LiDAR", "Intelligence Artificielle", "Computer Vision"]
     },
     {
       title: "Acteurs Majeurs",
       content: "Waymo (Google), Tesla, GM Cruise et Baidu sont parmi les leaders du secteur, chacun poursuivant des approches technologiques distinctes. Tesla mise sur la vision par caméra, tandis que Waymo privilégie le LiDAR pour une perception plus précise.",
-      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347687/autonomous_companies_ivn5vt.jpg",
+      image: "https://www.shop4tesla.com/cdn/shop/articles/tesla-vs-waymo-der-wettlauf-um-robotaxis-in-den-usa-921196.jpg?v=1728515227",
       imageAlt: "Entreprises de voitures autonomes",
       tags: ["Waymo", "Tesla", "Baidu", "GM Cruise"]
     },
@@ -163,7 +163,7 @@ autonomousCars: {
     {
       title: "Perspectives d'Avenir",
       content: "Les analystes prévoient que les taxis autonomes seront la première application commerciale à grande échelle, suivis par le transport de marchandises. L'adoption généralisée des véhicules particuliers entièrement autonomes pourrait prendre encore 5 à 10 ans.",
-      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347688/autonomous_future_bmbsjx.jpg",
+      image: "https://images.manouvellevoiture.com/data/image/v/o/voiture-autonome3.jpg?tr=pr-true",
       imageAlt: "Futur des voitures autonomes",
       tags: ["Prévisions", "Robotaxis", "Transport"]
     }
