@@ -156,7 +156,7 @@ autonomousCars: {
     {
       title: "Défis Actuels",
       content: "Malgré les progrès considérables, des obstacles significatifs demeurent : fiabilité dans des conditions météorologiques difficiles, compréhension des situations complexes en zone urbaine, cadres réglementaires et questions de responsabilité en cas d'accident.",
-      image: "https://res.cloudinary.com/dzszhtctg/image/upload/v1714347687/autonomous_challenges_eswn3j.jpg",
+      image: "https://fastercapital.com/fr/i-fr/Vehicules-autonomes---la-revolution-sur-roues-d-AAI--Defis-et-preoccupations-concernant-les-vehicules-autonomes.webp",
       imageAlt: "Défis des voitures autonomes",
       tags: ["Régulation", "Sécurité", "Éthique"]
     },
