@@ -190,7 +190,7 @@ export default function Techwatch() {
             {info.firstName.toLowerCase()}
             {info.lastName.toLowerCase()} $
           </span>{' '}
-          cd veille-techno/voitures-autonomes
+          cd tech-watch/voitures-autonomes
         </Typography>
         
         <Typography sx={{ fontFamily: 'monospace' }}>
