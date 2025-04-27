@@ -1,5 +1,4 @@
 // src/components/techwatch/Techwatch.module.scss
-
 .techwatchContainer {
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -98,6 +97,46 @@
   font-family: 'Courier New', monospace;
 }
 
+/* Pour le dark mode */
+:global(.darkTheme) {
+  .sectionCard {
+    border-color: #444;
+    background-color: #2a2a2a !important;
+  }
+  
+  .conclusion {
+    background-color: rgba(0, 255, 164, 0.15) !important;
+  }
+  
+  .conclusion h2, 
+  .conclusion p {
+    color: #f5f5f5 !important;
+  }
+  
+  .resourcesList {
+    li::before {
+      color: rgb(0, 255, 164);
+    }
+  }
+}
+
+/* Pour le light mode */
+:global(.lightTheme) {
+  .sectionCard {
+    border-color: #eaeaea;
+    background-color: #ffffff !important;
+  }
+  
+  .conclusion {
+    background-color: rgba(0, 255, 164, 0.1) !important;
+  }
+  
+  .conclusion h2, 
+  .conclusion p {
+    color: #333 !important;
+  }
+}
+
 @media (max-width: 600px) {
   .sectionCard {
     margin-bottom: 1.5rem;
@@ -113,17 +152,5 @@
   
   .conclusion {
     padding: 1rem !important;
-  }
-}
-
-/* Pour mode sombre */
-@media (prefers-color-scheme: dark) {
-  .conclusion {
-    color: #f5f5f5 !important;
-    background-color: rgba(0, 255, 164, 0.15) !important;
-  }
-  
-  .conclusion h2, .conclusion p {
-    color: #f5f5f5 !important;
   }
 }
