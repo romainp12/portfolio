@@ -83,6 +83,26 @@ export const info = {
         }
         
     ],
+stages: [
+    {
+        company: "Company Name 1",
+        date: "Jun 2023 - Aug 2023",
+        missions: [
+            "Developed responsive web applications using React",
+            "Implemented RESTful APIs with Node.js and Express",
+            "Collaborated with design team to improve user experience"
+        ]
+    },
+    {
+        company: "Company Name 2",
+        date: "Jan 2023 - Mar 2023",
+        missions: [
+            "Created database schemas and implemented data models",
+            "Built authentication system using JWT",
+            "Deployed applications to cloud platforms"
+        ]
+    }
+],
     portfolio: [
         {
             title: "Gestion d'un zoo",
