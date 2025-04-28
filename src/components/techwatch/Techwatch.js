@@ -159,41 +159,55 @@ export default function Techwatch() {
       </Grid>
 
       {/* Conclusion */}
-      <Box 
-        my={6} 
-        p={4} 
-        sx={{ 
-          backgroundColor: darkMode ? 'rgba(0, 255, 164, 0.2)' : 'rgba(0, 255, 164, 0.1)', 
-          borderRadius: '16px', 
-          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-          borderLeft: '4px solid rgb(0,255,164)',
-          backdropFilter: 'none'  // Suppression de tout effet d'ombre
-        }} 
-        className={Style.conclusion}
-      >
-        <Typography 
-          variant="h4" 
-          component="h2" 
-          gutterBottom 
-          sx={{ 
-            fontWeight: 'bold', 
-            color: darkMode ? '#ffffff' : '#333333'  // Blanc en mode sombre, gris foncé en mode clair
-          }}
-        >
-          Conclusion
-        </Typography>
-        
-        <Typography 
-          variant="body1" 
-          sx={{ 
-            color: darkMode ? '#ffffff' : '#333333',  // Blanc en mode sombre, gris foncé en mode clair
-            fontSize: '1.05rem', 
-            lineHeight: 1.6 
-          }}
-        >
-          {autonomousCarData.conclusion}
-        </Typography>
-      </Box>
+<Box 
+  my={6} 
+  p={4} 
+  sx={{ 
+    backgroundColor: darkMode ? 'rgba(0, 255, 164, 0.08)' : 'rgba(0, 255, 164, 0.1)', 
+    borderRadius: '16px', 
+    boxShadow: darkMode ? '0 4px 12px rgba(0,0,0,0.3)' : '0 4px 12px rgba(0,0,0,0.1)',
+    borderLeft: '4px solid rgb(0,255,164)',
+    /* Important - ajouter ceci pour augmenter l'opacité de base */
+    position: 'relative',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: darkMode ? 'rgba(30, 30, 30, 0.8)' : 'transparent',
+      borderRadius: '16px',
+      zIndex: -1
+    }
+  }} 
+  className={Style.conclusion}
+>
+  <Typography 
+    variant="h4" 
+    component="h2" 
+    gutterBottom 
+    sx={{ 
+      fontWeight: 'bold', 
+      color: darkMode ? '#ffffff' : '#333333',
+      textShadow: darkMode ? '0 0 2px rgba(0,0,0,0.8)' : 'none'
+    }}
+  >
+    Conclusion
+  </Typography>
+  
+  <Typography 
+    variant="body1" 
+    sx={{ 
+      color: darkMode ? '#ffffff' : '#333333',
+      fontSize: '1.05rem', 
+      lineHeight: 1.6,
+      fontWeight: darkMode ? 500 : 400
+    }}
+  >
+    {autonomousCarData.conclusion}
+  </Typography>
+</Box>
 
       {/* Ressources */}
       <Box mb={6}>
