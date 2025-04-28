@@ -31,11 +31,6 @@
   }
 }
 
-.conclusion {
-  border-left: 4px solid rgb(0,255,164);
-  background-color: rgba(0,255,164, 0.05) !important;
-}
-
 .resourcesList {
   list-style-type: none;
   padding-left: 0;
@@ -97,6 +92,17 @@
   font-family: 'Courier New', monospace;
 }
 
+.newConclusion {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  background-color: transparent !important;
+}
+
 /* Pour le dark mode */
 :global(.dark) {
   .sectionCard {
@@ -104,18 +110,15 @@
     background-color: #2a2a2a !important;
   }
   
-  .conclusion {
-    /* Réduire l'opacité du fond vert */
-    background-color: rgba(0, 255, 164, 0.08) !important;
-    
-    /* Augmenter la luminosité et ajouter un contraste au texte */
-    h2, p {
-      color: white !important;
-      text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-      /* Ajouter un effet pour améliorer la lisibilité */
-      font-weight: 500;
+  // Nous n'avons plus besoin de styles spécifiques pour la conclusion en mode sombre
+  // puisque nous avons complètement repensé son design
+  
+  .resourcesList {
+    li::before {
+      color: rgb(0, 255, 164);
     }
   }
+}
   
   /* Améliorer la visibilité des ressources */
   .resourcesList {
@@ -145,14 +148,6 @@
     background-color: #ffffff !important;
   }
   
-  .conclusion {
-    background-color: rgba(0, 255, 164, 0.1) !important;
-  }
-  
-  .conclusion h2, 
-  .conclusion p {
-    color: #000000 !important;
-  }
 }
 
 @media (max-width: 600px) {
@@ -168,7 +163,7 @@
     padding: 1rem !important;
   }
   
-  .conclusion {
+  .newConclusion {
     padding: 1rem !important;
   }
 }
