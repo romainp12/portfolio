@@ -7,6 +7,8 @@ import Style from './Techwatch.module.scss';
 export default function Techwatch() {
   // Utilisation des données directement depuis info.js
   const autonomousCarData = info.autonomousCars;
+  // Détection du mode sombre basé sur les classes CSS
+  const darkMode = document.body.classList.contains('dark') || document.querySelector('.dark') !== null;
   
   return (
     <Container maxWidth="lg" sx={{ py: 6 }} className={Style.techwatchContainer}>
@@ -36,7 +38,7 @@ export default function Techwatch() {
             maxWidth: '800px', 
             mx: 'auto',
             color: 'white',
-            backgroundColor: 'rgba(0,0,0,0.7)',
+            backgroundColor: darkMode ? 'rgba(20,20,20,0.8)' : 'rgba(0,0,0,0.7)',
             p: 2,
             borderRadius: '8px',
             fontSize: { xs: '0.9rem', sm: '1rem' }
@@ -71,7 +73,9 @@ export default function Techwatch() {
                 '&:hover': {
                   transform: 'translateY(-5px)',
                   boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
-                }
+                },
+                backgroundColor: darkMode ? '#2a2a2a' : '#ffffff',
+                border: `1px solid ${darkMode ? '#444' : '#eaeaea'}`
               }}
               className={Style.sectionCard}
             >
@@ -87,6 +91,7 @@ export default function Techwatch() {
                         fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' },
                         position: 'relative',
                         display: 'inline-block',
+                        color: darkMode ? '#f5f5f5' : '#333',
                         '&::after': {
                           content: '""',
                           position: 'absolute',
@@ -102,7 +107,13 @@ export default function Techwatch() {
                       {section.title}
                     </Typography>
                     
-                    <Typography variant="body1" sx={{ mb: 3 }}>
+                    <Typography 
+                      variant="body1" 
+                      sx={{ 
+                        mb: 3,
+                        color: darkMode ? '#e0e0e0' : 'text.primary'
+                      }}
+                    >
                       {section.content}
                     </Typography>
                     
@@ -133,10 +144,10 @@ export default function Techwatch() {
                       height: '100%',
                       minHeight: '300px',
                       objectFit: 'cover',
-                      filter: 'brightness(1.05)',
+                      filter: darkMode ? 'brightness(0.95)' : 'brightness(1.05)',
                       transition: 'filter 0.3s ease',
                       '&:hover': {
-                        filter: 'brightness(1.1) saturate(1.1)'
+                        filter: darkMode ? 'brightness(1.05)' : 'brightness(1.1) saturate(1.1)'
                       }
                     }}
                   />
@@ -148,57 +159,68 @@ export default function Techwatch() {
       </Grid>
 
       {/* Conclusion */}
-<Box 
-  my={6} 
-  p={4} 
-  sx={{ 
-    backgroundColor: isDarkMode ? 'rgba(0, 255, 164, 0.2)' : 'rgba(0, 255, 164, 0.1)', 
-    borderRadius: '16px', 
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-    borderLeft: '4px solid rgb(0,255,164)',
-    // Ajouter cette propriété pour un fond plus clair en mode sombre
-    backdropFilter: isDarkMode ? 'brightness(1.3)' : 'none'
-  }} 
-  className={Style.conclusion}
->
-  <Typography 
-    variant="h4" 
-    component="h2" 
-    gutterBottom 
-    sx={{ 
-      fontWeight: 'bold', 
-      // Augmenter la luminosité du texte en mode sombre
-      color: isDarkMode ? '#ffffff' : '#333333'
-    }}
-  >
-    Conclusion
-  </Typography>
-  
-  <Typography 
-    variant="body1" 
-    sx={{ 
-      // Augmenter la luminosité du texte en mode sombre
-      color: isDarkMode ? '#ffffff' : '#333333',
-      fontSize: '1.05rem', 
-      lineHeight: 1.6 
-    }}
-  >
-    {autonomousCarData.conclusion}
-  </Typography>
-</Box>
+      <Box 
+        my={6} 
+        p={4} 
+        sx={{ 
+          backgroundColor: darkMode ? 'rgba(0, 255, 164, 0.2)' : 'rgba(0, 255, 164, 0.1)', 
+          borderRadius: '16px', 
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+          borderLeft: '4px solid rgb(0,255,164)',
+          backdropFilter: 'none'  // Suppression de tout effet d'ombre
+        }} 
+        className={Style.conclusion}
+      >
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          gutterBottom 
+          sx={{ 
+            fontWeight: 'bold', 
+            color: darkMode ? '#ffffff' : '#333333'  // Blanc en mode sombre, gris foncé en mode clair
+          }}
+        >
+          Conclusion
+        </Typography>
+        
+        <Typography 
+          variant="body1" 
+          sx={{ 
+            color: darkMode ? '#ffffff' : '#333333',  // Blanc en mode sombre, gris foncé en mode clair
+            fontSize: '1.05rem', 
+            lineHeight: 1.6 
+          }}
+        >
+          {autonomousCarData.conclusion}
+        </Typography>
+      </Box>
 
       {/* Ressources */}
       <Box mb={6}>
-        <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
+        <Typography 
+          variant="h5" 
+          component="h2" 
+          gutterBottom 
+          sx={{ 
+            fontWeight: 'bold',
+            color: darkMode ? '#f5f5f5' : '#333'
+          }}
+        >
           Ressources
         </Typography>
         
-        <Divider sx={{ mb: 2 }} />
+        <Divider sx={{ mb: 2, backgroundColor: darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' }} />
         
-        <ul className={Style.resourcesList}>
+        <ul className={`${Style.resourcesList} ${darkMode ? Style.darkResources : ''}`}>
           {autonomousCarData.resources.map((resource, index) => (
             <li key={index}>
-              <a href={resource.link} target="_blank" rel="noopener noreferrer" className={Style.resourceLink}>
+              <a 
+                href={resource.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={Style.resourceLink}
+                style={{ color: darkMode ? 'rgb(0,255,164)' : 'rgb(166,104,255)' }}
+              >
                 {resource.name}
               </a>
             </li>
@@ -207,7 +229,16 @@ export default function Techwatch() {
       </Box>
 
       {/* Mode terminal pour la cohérence avec le reste du site */}
-      <Box mb={6} p={3} sx={{ backgroundColor: '#2E3440', borderRadius: '8px', color: 'white' }} className={Style.terminalSection}>
+      <Box 
+        mb={6} 
+        p={3} 
+        sx={{ 
+          backgroundColor: darkMode ? '#1a1a1a' : '#2E3440', 
+          borderRadius: '8px', 
+          color: 'white' 
+        }} 
+        className={Style.terminalSection}
+      >
         <Box mb={2} sx={{ display: 'flex', gap: '8px' }}>
           <span className={Style.terminalDot} style={{ backgroundColor: '#FF5F56' }}></span>
           <span className={Style.terminalDot} style={{ backgroundColor: '#FFBD2E' }}></span>
