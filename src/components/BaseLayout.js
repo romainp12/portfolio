@@ -16,7 +16,7 @@ export default function BaseLayout() {
    const refAbout = useScrollObserver(setActive);
    const refPortfolio = useScrollObserver(setActive);
    const refTechwatch = useScrollObserver(setActive);
-   let [darkMode, setDarkMode] = useState(false);
+   let [darkMode, setDarkMode] = useState(true);
 
 
 
@@ -33,7 +33,7 @@ export default function BaseLayout() {
       if (detectedDarkMode) {
          setDarkMode(detectedDarkMode)
       } else {
-         localStorage.setItem('darkMode', 'false')
+         localStorage.setItem('darkMode', 'true')
       }
    }, [])
 
