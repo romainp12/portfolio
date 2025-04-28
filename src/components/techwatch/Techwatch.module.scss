@@ -33,11 +33,13 @@
 .resourcesList {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 1.5rem;
   
   li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.8rem;
+    font-size: 1.05rem;
     
     &::before {
       content: '→';
@@ -45,6 +47,7 @@
       left: 0;
       color: rgb(166,104,255);
       font-weight: bold;
+      font-size: 1.2rem;
     }
   }
 }
@@ -52,11 +55,15 @@
 .resourceLink {
   color: rgb(166,104,255);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 3px;
   
   &:hover {
     color: rgb(0,255,164);
     text-decoration: underline;
+    background-color: rgba(166,104,255, 0.1);
   }
 }
 
@@ -112,6 +119,7 @@
   .resourcesList {
     li::before {
       color: rgb(0, 255, 164);
+      font-size: 1.2rem;
     }
     
     a {
@@ -120,6 +128,7 @@
       
       &:hover {
         text-decoration: underline;
+        background-color: rgba(0, 255, 164, 0.15);
         color: white !important;
       }
     }
