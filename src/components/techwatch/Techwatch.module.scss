@@ -1,4 +1,3 @@
-// src/components/techwatch/Techwatch.module.scss
 .techwatchContainer {
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -110,25 +109,11 @@
     background-color: #2a2a2a !important;
   }
   
-  // Nous n'avons plus besoin de styles spécifiques pour la conclusion en mode sombre
-  // puisque nous avons complètement repensé son design
-  
   .resourcesList {
     li::before {
       color: rgb(0, 255, 164);
     }
-  }
-}
-  
-  /* Améliorer la visibilité des ressources */
-  .resourcesList {
-    li {
-      &::before {
-        color: rgb(0, 255, 164);
-      }
-    }
     
-    /* Rendre les liens plus visibles */
     a {
       color: rgb(0, 255, 164) !important;
       font-weight: 500;
@@ -147,7 +132,6 @@
     border-color: #eaeaea;
     background-color: #ffffff !important;
   }
-  
 }
 
 @media (max-width: 600px) {
@@ -164,6 +148,6 @@
   }
   
   .newConclusion {
-    padding: 1rem !important;
+    margin: 1.5rem 0 !important;
   }
 }
