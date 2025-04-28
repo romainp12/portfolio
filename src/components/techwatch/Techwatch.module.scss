@@ -97,7 +97,6 @@
   font-family: 'Courier New', monospace;
 }
 
-
 /* Pour le dark mode */
 :global(.dark) {
   .sectionCard {
@@ -106,16 +105,35 @@
   }
   
   .conclusion {
-    background-color: rgba(0, 255, 164, 0.15) !important;
+    /* Réduire l'opacité du fond vert */
+    background-color: rgba(0, 255, 164, 0.08) !important;
     
+    /* Augmenter la luminosité et ajouter un contraste au texte */
     h2, p {
       color: white !important;
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+      /* Ajouter un effet pour améliorer la lisibilité */
+      font-weight: 500;
     }
   }
   
+  /* Améliorer la visibilité des ressources */
   .resourcesList {
-    li::before {
-      color: rgb(0, 255, 164);
+    li {
+      &::before {
+        color: rgb(0, 255, 164);
+      }
+    }
+    
+    /* Rendre les liens plus visibles */
+    a {
+      color: rgb(0, 255, 164) !important;
+      font-weight: 500;
+      
+      &:hover {
+        text-decoration: underline;
+        color: white !important;
+      }
     }
   }
 }
