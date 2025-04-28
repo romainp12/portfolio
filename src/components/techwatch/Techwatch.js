@@ -158,55 +158,56 @@ export default function Techwatch() {
         ))}
       </Grid>
 
-      {/* Conclusion */}
+      // Remplacez la section conclusion dans Techwatch.js par ce code
+{/* Conclusion - Nouveau design */}
 <Box 
   my={6} 
-  p={4} 
   sx={{ 
-    backgroundColor: darkMode ? 'rgba(0, 255, 164, 0.08)' : 'rgba(0, 255, 164, 0.1)', 
     borderRadius: '16px', 
-    boxShadow: darkMode ? '0 4px 12px rgba(0,0,0,0.3)' : '0 4px 12px rgba(0,0,0,0.1)',
-    borderLeft: '4px solid rgb(0,255,164)',
-    /* Important - ajouter ceci pour augmenter l'opacité de base */
-    position: 'relative',
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: darkMode ? 'rgba(30, 30, 30, 0.8)' : 'transparent',
-      borderRadius: '16px',
-      zIndex: -1
-    }
+    overflow: 'hidden',
+    boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
   }} 
-  className={Style.conclusion}
+  className={Style.newConclusion}
 >
-  <Typography 
-    variant="h4" 
-    component="h2" 
-    gutterBottom 
+  {/* En-tête de la conclusion */}
+  <Box 
     sx={{ 
-      fontWeight: 'bold', 
-      color: darkMode ? '#ffffff' : '#333333',
-      textShadow: darkMode ? '0 0 2px rgba(0,0,0,0.8)' : 'none'
+      background: info.gradient,
+      py: 2,
+      px: 4
     }}
   >
-    Conclusion
-  </Typography>
+    <Typography 
+      variant="h4" 
+      component="h2" 
+      sx={{ 
+        fontWeight: 'bold', 
+        color: 'white',
+        fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
+      }}
+    >
+      Conclusion
+    </Typography>
+  </Box>
   
-  <Typography 
-    variant="body1" 
+  {/* Contenu de la conclusion */}
+  <Box 
     sx={{ 
-      color: darkMode ? '#ffffff' : '#333333',
-      fontSize: '1.05rem', 
-      lineHeight: 1.6,
-      fontWeight: darkMode ? 500 : 400
+      p: 4,
+      backgroundColor: darkMode ? '#2a2a2a' : '#ffffff'
     }}
   >
-    {autonomousCarData.conclusion}
-  </Typography>
+    <Typography 
+      variant="body1" 
+      sx={{ 
+        color: darkMode ? '#f5f5f5' : '#333333',
+        fontSize: '1.05rem', 
+        lineHeight: 1.8
+      }}
+    >
+      {autonomousCarData.conclusion}
+    </Typography>
+  </Box>
 </Box>
 
       {/* Ressources */}
