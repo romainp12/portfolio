@@ -99,19 +99,17 @@
 
 
 /* Pour le dark mode */
-:global(.darkTheme) {
+:global(.dark) {
   .sectionCard {
     border-color: #444;
     background-color: #2a2a2a !important;
   }
   
   .conclusion {
-    background-color: rgba(0, 255, 164, 0.25) !important;
-    background-blend-mode: screen;
+    background-color: rgba(0, 255, 164, 0.15) !important;
     
     h2, p {
       color: white !important;
-      text-shadow: 0 0 2px rgba(0,0,0,0.5);
     }
   }
   
@@ -123,7 +121,7 @@
 }
 
 /* Pour le light mode */
-:global(.lightTheme) {
+:global(.light) {
   .sectionCard {
     border-color: #eaeaea;
     background-color: #ffffff !important;
