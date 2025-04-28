@@ -97,6 +97,7 @@
   font-family: 'Courier New', monospace;
 }
 
+
 /* Pour le dark mode */
 :global(.darkTheme) {
   .sectionCard {
@@ -105,12 +106,13 @@
   }
   
   .conclusion {
-    background-color: rgba(0, 255, 164, 0.15) !important;
-  }
-  
-  .conclusion h2, 
-  .conclusion p {
-    color: #f5f5f5 !important;
+    background-color: rgba(0, 255, 164, 0.25) !important;
+    background-blend-mode: screen;
+    
+    h2, p {
+      color: white !important;
+      text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
   }
   
   .resourcesList {
