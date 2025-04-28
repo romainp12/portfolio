@@ -1,4 +1,3 @@
-// src/components/techwatch/Techwatch.js
 import React from 'react';
 import { Box, Grid, Typography, Container, Card, CardContent, CardMedia, Divider, Chip } from "@mui/material";
 import { info } from "../../info/Info";
@@ -158,57 +157,56 @@ export default function Techwatch() {
         ))}
       </Grid>
 
-      // Remplacez la section conclusion dans Techwatch.js par ce code
-{/* Conclusion - Nouveau design */}
-<Box 
-  my={6} 
-  sx={{ 
-    borderRadius: '16px', 
-    overflow: 'hidden',
-    boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
-  }} 
-  className={Style.newConclusion}
->
-  {/* En-tête de la conclusion */}
-  <Box 
-    sx={{ 
-      background: info.gradient,
-      py: 2,
-      px: 4
-    }}
-  >
-    <Typography 
-      variant="h4" 
-      component="h2" 
-      sx={{ 
-        fontWeight: 'bold', 
-        color: 'white',
-        fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
-      }}
-    >
-      Conclusion
-    </Typography>
-  </Box>
-  
-  {/* Contenu de la conclusion */}
-  <Box 
-    sx={{ 
-      p: 4,
-      backgroundColor: darkMode ? '#2a2a2a' : '#ffffff'
-    }}
-  >
-    <Typography 
-      variant="body1" 
-      sx={{ 
-        color: darkMode ? '#f5f5f5' : '#333333',
-        fontSize: '1.05rem', 
-        lineHeight: 1.8
-      }}
-    >
-      {autonomousCarData.conclusion}
-    </Typography>
-  </Box>
-</Box>
+      {/* Conclusion - Nouveau design */}
+      <Box 
+        my={6} 
+        sx={{ 
+          borderRadius: '16px', 
+          overflow: 'hidden',
+          boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
+        }} 
+        className={Style.newConclusion}
+      >
+        {/* En-tête de la conclusion */}
+        <Box 
+          sx={{ 
+            background: info.gradient,
+            py: 2,
+            px: 4
+          }}
+        >
+          <Typography 
+            variant="h4" 
+            component="h2" 
+            sx={{ 
+              fontWeight: 'bold', 
+              color: 'white',
+              fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem' }
+            }}
+          >
+            Conclusion
+          </Typography>
+        </Box>
+        
+        {/* Contenu de la conclusion */}
+        <Box 
+          sx={{ 
+            p: 4,
+            backgroundColor: darkMode ? '#2a2a2a' : '#ffffff'
+          }}
+        >
+          <Typography 
+            variant="body1" 
+            sx={{ 
+              color: darkMode ? '#f5f5f5' : '#333333',
+              fontSize: '1.05rem', 
+              lineHeight: 1.8
+            }}
+          >
+            {autonomousCarData.conclusion}
+          </Typography>
+        </Box>
+      </Box>
 
       {/* Ressources */}
       <Box mb={6}>
