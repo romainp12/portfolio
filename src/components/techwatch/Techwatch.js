@@ -152,10 +152,12 @@ export default function Techwatch() {
   my={6} 
   p={4} 
   sx={{ 
-    backgroundColor: isDarkMode ? 'rgba(0,255,164, 0.15)' : 'rgba(0,255,164, 0.1)', 
+    backgroundColor: isDarkMode ? 'rgba(0, 255, 164, 0.2)' : 'rgba(0, 255, 164, 0.1)', 
     borderRadius: '16px', 
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-    borderLeft: '4px solid rgb(0,255,164)'
+    borderLeft: '4px solid rgb(0,255,164)',
+    // Ajouter cette propriété pour un fond plus clair en mode sombre
+    backdropFilter: isDarkMode ? 'brightness(1.3)' : 'none'
   }} 
   className={Style.conclusion}
 >
@@ -165,7 +167,8 @@ export default function Techwatch() {
     gutterBottom 
     sx={{ 
       fontWeight: 'bold', 
-      color: isDarkMode ? '#f5f5f5' : '#333333' 
+      // Augmenter la luminosité du texte en mode sombre
+      color: isDarkMode ? '#ffffff' : '#333333'
     }}
   >
     Conclusion
@@ -174,7 +177,8 @@ export default function Techwatch() {
   <Typography 
     variant="body1" 
     sx={{ 
-      color: isDarkMode ? '#f5f5f5' : '#333333', 
+      // Augmenter la luminosité du texte en mode sombre
+      color: isDarkMode ? '#ffffff' : '#333333',
       fontSize: '1.05rem', 
       lineHeight: 1.6 
     }}
